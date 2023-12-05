@@ -8,6 +8,7 @@ dotenv.config()
 //CONEXION A LA BASE DE DATOS
 
 mongoose.Promise = global.Promise;
+mongoose.set('strictQuery', false)
 const dbUrL = "mongodb://localhost:27017/ecommerce";
 mongoose.connect(
     dbUrL , {

@@ -1,12 +1,17 @@
 export default {
     product_list: (product,variedades = [],avg_review = 0,count_review = 0,CampaingDiscount = null) => {
         var IMAGEN_TWO = "";
-        let GALERIAS = product.galerias.map((galeria) => {
-            galeria.imagen = process.env.URL_BACKEND+'/api/products/uploads/product/'+galeria.imagen;//*
-            return galeria;
-        });
-        var VAL = Math.floor(Math.random() * 3);//0,1,2
-        IMAGEN_TWO = GALERIAS[VAL].imagen;
+        let GALERIAS = "";
+        if(product.galerias?.length){
+            GALERIAS = product.galerias.map((galeria) => {
+                galeria.imagen = process.env.URL_BACKEND+'/api/products/uploads/product/'+galeria.imagen;//*
+                return galeria;
+            });
+            let VAL = Math.floor(Math.random() * 3);//0,1,2
+            IMAGEN_TWO = GALERIAS[VAL].imagen;
+        }
+      
+      
         return {
             _id: product._id,
             title: product.title,

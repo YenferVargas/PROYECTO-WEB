@@ -2,7 +2,7 @@ import models from '../models'
 import resources from '../resources';
 import fs from 'fs'
 import path from 'path'
-
+ 
 export default {
     register: async(req,res) => {
         try {
@@ -80,17 +80,22 @@ export default {
                     {"title": new RegExp(req.query.search,'i')},
                 );
             }
-            if(req.query.categorie){
+            /*if(req.query.categorie){
                 filter.push(
                     {"categorie": req.query.categorie}
                 );
-            }
+            }*/
+            
             let products = await models.Product.find({
                 $and:filter,
             }).populate('categorie')
             products = products.map(product => {
                 return resources.Product.product_list(product);
-            })
+            }) 
+
+           /* let products = await models.Product.findOne({
+                     _id: '65532064dd318f6b83962f17'
+            })*/
 
             res.status(200).json({
                 products: products,
@@ -130,7 +135,8 @@ export default {
             })
         } catch (error) {
             res.status(500).send({
-                message: "OCURRIO UN PROBLEMA"
+                message: "OCURRIO UN PROBLEMA",
+                error: error.message 
             });
             console.log(error);
         }
