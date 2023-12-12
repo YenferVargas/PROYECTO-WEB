@@ -5,13 +5,12 @@ import { NosotrosComponent } from './nosotros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../../shared/shared.module';
+// import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
     NosotrosComponent
-    
-    
   ],
   imports: [
     
@@ -22,7 +21,6 @@ import { SharedModule } from '../../shared/shared.module';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule, // Si usas routerLink y otras directivas de enrutamiento
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  ]
 })
 export class NosotrosModule { }

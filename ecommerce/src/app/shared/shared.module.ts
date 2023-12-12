@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

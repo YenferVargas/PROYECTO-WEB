@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// '../../../shared/footer'
 @Component({
   selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',

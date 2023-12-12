@@ -8,7 +8,7 @@ export default {
                 return galeria;
             });
             let VAL = Math.floor(Math.random() * 3);//0,1,2
-            IMAGEN_TWO = GALERIAS[VAL].imagen;
+            IMAGEN_TWO = GALERIAS[VAL]?.imagen;
         }
       
       

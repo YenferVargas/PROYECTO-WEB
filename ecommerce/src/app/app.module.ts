@@ -9,12 +9,15 @@ import { NosotrosComponent } from './modules/nosotros/nosotros.component';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { BlogComponent } from './modules/blog/blog.component'
 
+// import { FooterComponent } from './shared/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NosotrosComponent,
     ContactoComponent,
-    BlogComponent
+    BlogComponent,
+   //  FooterComponent,
   ],
   imports: [
     BrowserModule,
