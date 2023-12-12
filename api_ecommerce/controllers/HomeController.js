@@ -1,3 +1,4 @@
+import { parse } from 'handlebars';
 import models from '../models'
 import resource from '../resources'
 import bcrypt from 'bcryptjs'
@@ -27,7 +28,8 @@ export default {
             });
             // console.log(CampaingDiscount);
             let BestProducts = await models.Product.find({state: 2}).sort({"createdAt": -1});
-
+            console.log("bestproducts");
+            console.log(BestProducts);
             var ObjectBestProducts = [];
             for (const Product of BestProducts) {
                 let VARIEDADES = await models.Variedad.find({product: Product._id});
@@ -124,13 +126,15 @@ export default {
     },
     show_landing_product:async(req,res) => {
         try {
+            // console.log(JSON.parse(req.query));
             let SLUG = req.params.slug;
             let DISCOUNT_ID = req.query._id;
             console.log(DISCOUNT_ID);
+            console.log(SLUG);
             let Product = await models.Product.findOne({slug: SLUG,state: 2});
-            
+            // console.log(JSON.parse(Product));
             let VARIEDADES = await models.Variedad.find({product: Product._id});
-
+            // console.log(JSON.parse(VARIEDADES));
             let REVIEWS = await models.Review.find({product: Product._id}).populate("user");
             let AVG_REVIEW = REVIEWS.length > 0 ? Math.ceil(REVIEWS.reduce((sum,item) => sum + item.cantidad,0)/REVIEWS.length) : 0;
             let COUNT_REVIEW = REVIEWS.length;

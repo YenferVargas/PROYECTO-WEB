@@ -49,12 +49,12 @@
     <app-code-preview [viewItem]="exampleShowHigh">
       <div class="example-preview">
         <span>
-          <b>Show and hide delays:</b>
-          To add a delay before showing or hiding the tooltip, you can use the
-          inputs
-          <mark>matTooltipShowDelay</mark> and
-          <mark>matTooltipHideDelay</mark> to provide a delay time in
-          milliseconds.
+          <b>Mostrar y ocultar retrasos:</b>
+           Para agregar un retraso antes de mostrar u ocultar la información sobre herramientas, puede usar el
+           entradas
+           <mark>matTooltipShowDelay</mark> y
+           <mark>matTooltipHideDelay</mark> para proporcionar un tiempo de retraso en
+           milisegundos.
         </span>
         <div class="separator separator-dashed my-6"></div>
         <div>
@@ -65,7 +65,7 @@
             matTooltip="Tooltip!"
             matTooltipShowDelay="1000"
           >
-            My tooltip waits one second to show
+          Mi información sobre herramientas espera un segundo para mostrarse.
           </button>
 
           <button
@@ -74,7 +74,7 @@
             matTooltip="Tooltip!"
             matTooltipHideDelay="2000"
           >
-            My tooltip waits two seconds to hide
+          Mi información sobre herramientas espera dos segundos para ocultarse.
           </button>
         </div>
       </div>
@@ -85,16 +85,16 @@
     <app-code-preview [viewItem]="exampleDelay">
       <div class="example-preview">
         <span>
-          <b>Changing the default delay behavior:</b>
-          You can configure your app's tooltip default show/hide delays by
-          configuring and providing your options using the
-          <mark>MAT_TOOLTIP_DEFAULT_OPTIONS</mark> injection token.
+          <b>Cambiar el comportamiento de retraso predeterminado:</b>
+           Puede configurar los retrasos predeterminados para mostrar/ocultar información sobre herramientas de su aplicación haciendo clic en
+           configurar y proporcionar sus opciones utilizando el
+           <mark>MAT_TOOLTIP_DEFAULT_OPTIONS</mark> token de inyección.
         </span>
         <div class="separator separator-dashed my-6"></div>
 
         <div>
           <button mat-raised-button matTooltip="By default, I delay">
-            Button with delay-default tooltip
+            Botón con información sobre herramientas predeterminada con retraso
           </button>
         </div>
       </div>
@@ -103,20 +103,20 @@
     <app-code-preview [viewItem]="exampleManually">
       <div class="example-preview">
         <span>
-          <b>Manually calling show() and hide():</b>
-          To manually cause the tooltip to show or hide, you can call the
-          <mark>show</mark> and <mark>hide</mark> directive methods, which both
-          accept a number in milliseconds to delay before applying the display
-          change.
+          <b>Llamar manualmente a show() y hide():</b>
+          Para hacer que la información sobre herramientas se muestre u oculte manualmente, puede llamar al
+          Los métodos directivos <mark>show</mark> y <mark>hide</mark>, que ambos
+          aceptar un número en milisegundos para retrasar antes de aplicar la visualización
+          cambiar.
         </span>
         <div class="separator separator-dashed my-6"></div>
         <div>
           <button class="mr-2" mat-raised-button (click)="tooltip.show()">
-            Show tooltip
+            Mostrar información sobre herramientas
           </button>
 
           <span matTooltip="This is the tooltip message" #tooltip="matTooltip">
-            I have a tooltip
+            Tengo una información sobre herramientas
           </span>
         </div>
       </div>

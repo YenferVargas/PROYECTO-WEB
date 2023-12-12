@@ -4,11 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import {BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NosotrosComponent } from './modules/nosotros/nosotros.component';
+import { ContactoComponent } from './modules/contacto/contacto.component';
+import { BlogComponent } from './modules/blog/blog.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NosotrosComponent,
+    ContactoComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

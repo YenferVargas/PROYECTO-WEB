@@ -6,11 +6,12 @@
                 <div class="col-lg-6 col-md-8">
                     <div class="inner">
                         <ul class="axil-breadcrumb">
-                            <li class="axil-breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="axil-breadcrumb-item"><a href="index.html">Inicio
+                            </a></li>
                             <li class="separator"></li>
-                            <li class="axil-breadcrumb-item active" aria-current="page">My Account</li>
+                            <li class="axil-breadcrumb-item active" aria-current="page">Mi cuenta</li>
                         </ul>
-                        <h1 class="title">Explore All Products</h1>
+                        <h1 class="title">Explorar todos los productos</h1>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4">
@@ -35,7 +36,7 @@
                             <button class="sidebar-close filter-close-btn"><i class="fas fa-times"></i></button>
                         </div>
                         <div class="toggle-list product-categories active">
-                            <h6 class="title">CATEGORIES</h6>
+                            <h6 class="title">CATEGORIAS</h6>
                             <div class="shop-submenu">
                                 <ul>
                                     <ng-container *ngFor="let categorie of categories">
@@ -72,7 +73,7 @@
                             </div>
                         </div>
                         <div class="toggle-list product-price-range active">
-                            <h6 class="title">PRICE</h6>
+                            <h6 class="title">PRECIO</h6>
                             <div class="shop-submenu">
                                 <ul>
                                     <li class="chosen"><a href="#">30</a></li>
@@ -81,7 +82,7 @@
                                 <form action="#" class="mt--25">
                                     <div id="slider-range"></div>
                                     <div class="flex-center mt--20">
-                                        <span class="input-range">Price: </span>
+                                        <span class="input-range">Precio: </span>
                                         <input type="text" id="amount" class="amount-range" readonly>
                                         <input type="hidden" id="amount-min" value="">
                                         <input type="hidden" id="amount-max" value="">
@@ -99,12 +100,12 @@
                             <div class="axil-shop-top mb--40">
                                 <div class="category-select align-items-center justify-content-lg-end justify-content-between">
                                     <!-- Start Single Select  -->
-                                    <span class="filter-results">Showing 1-12 of 84 results</span>
+                                    <span class="filter-results">Mostrando 1-12 de 84 resultados</span>
                                     <select class="single-select">
-                                        <option>Short by Latest</option>
-                                        <option>Short by Oldest</option>
-                                        <option>Short by Name</option>
-                                        <option>Short by Price</option>
+                                        <option>Breve por lo último</option>
+                                         <option>Corto por más antiguo</option>
+                                         <option>Abreviado por nombre</option>
+                                         <option>Abreviar por precio</option>
                                     </select>
                                     <!-- End Single Select  -->
                                 </div>
@@ -125,8 +126,8 @@
                                             <img [src]="product.imagen" style="width: 300px;height: 300px;" alt="Product Images">
                                         </a>
                                         <div class="label-block label-right" *ngIf="product.campaing_discount">
-                                            <div class="product-badget" *ngIf="product.campaing_discount.type_discount == 1">{{ product.campaing_discount.discount }}% Off</div>
-                                            <div class="product-badget" *ngIf="product.campaing_discount.type_discount == 2">-{{ product.campaing_discount.discount }}USD Off</div>
+                                            <div class="product-badget" *ngIf="product.campaing_discount.type_discount == 1">{{ product.campaing_discount.discount }}% Apagado</div>
+                                            <div class="product-badget" *ngIf="product.campaing_discount.type_discount == 2">-{{ product.campaing_discount.discount }} $  de descuento</div>
                                         </div>
                                         <div class="product-hover-action">
                                             <ul class="cart-action">
@@ -140,8 +141,8 @@
                                         <div class="inner">
                                             <h5 class="title"><a [routerLink]="[ '/landing-producto/', product.slug ]" [queryParams]="getRouterDiscount(product)">{{ product.title }}</a></h5>
                                             <div class="product-price-variant">
-                                                <span class="price old-price" *ngIf="product.campaing_discount">{{ product.price_usd }} USD</span>
-                                                <span class="price current-price">{{ product.price_usd - getDiscountProduct(product) }} USD</span>
+                                                <span class="price old-price" *ngIf="product.campaing_discount">{{ product.price_usd }} $</span>
+                                                <span class="price current-price">{{ product.price_usd - getDiscountProduct(product) }} $</span>
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +152,7 @@
 
                     </div>
                     <div class="text-center pt--20">
-                        <a href="#" class="axil-btn btn-bg-lighter btn-load-more">Load more</a>
+                        <a href="#" class="axil-btn btn-bg-lighter btn-load-more">Carga más</a>
                     </div>
                 </div>
             </div>
@@ -165,13 +166,13 @@
         <div class="container">
             <div class="etrade-newsletter-wrapper bg_image bg_image--5">
                 <div class="newsletter-content">
-                    <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open"></i>Newsletter</span>
-                    <h2 class="title mb--40 mb_sm--30">Get weekly update</h2>
+                    <span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open"></i>Boletin informativo</span>
+                    <h2 class="title mb--40 mb_sm--30">Obtener actualización semanal</h2>
                     <div class="input-group newsletter-form">
                         <div class="position-relative newsletter-inner mb--15">
-                            <input placeholder="example@gmail.com" type="text">
+                            <input placeholder="ejemplo@gmail.com" type="text">
                         </div>
-                        <button type="submit" class="axil-btn mb--15">Subscribe</button>
+                        <button type="submit" class="axil-btn mb--15">Subscrite</button>
                     </div>
                 </div>
             </div>
@@ -202,10 +203,10 @@
                                                 <img [src]="galeria.imagen" alt="Product Images">
                                                 <ng-container *ngIf="product_selected.campaing_discount">
                                                     <div class="label-block label-right" *ngIf="product_selected.campaing_discount.type_discount == 1">
-                                                        <div class="product-badget">{{ product_selected.campaing_discount.discount }}% OFF</div>
+                                                        <div class="product-badget">{{ product_selected.campaing_discount.discount }}% Apagado</div>
                                                     </div>
                                                     <div class="label-block label-right" *ngIf="product_selected.campaing_discount.type_discount == 2">
-                                                        <div class="product-badget">{{ product_selected.campaing_discount.discount }}USD OFF</div>
+                                                        <div class="product-badget">{{ product_selected.campaing_discount.discount }}$ de descuento</div>
                                                     </div>
                                                 </ng-container>
                                                 
@@ -242,17 +243,17 @@
                                             <img src="assets/images/icons/rate.png" alt="Rate Images">
                                         </div>
                                         <div class="review-link">
-                                            <a href="#">(<span>1</span> customer reviews)</a>
+                                            <a href="#">(<span>1</span> Opiniones de los usuarios)</a>
                                         </div>
                                     </div>
                                     <h3 class="product-title">{{ product_selected.title }}</h3>
-                                    <span class="price-amount" *ngIf="!product_selected.campaing_discount">{{ product_selected.price_usd }} USD</span>
-                                    <span class="price-amount" *ngIf="product_selected.campaing_discount"> <del>{{ product_selected.price_usd }} USD</del> </span>
-                                    <span class="price-amount" *ngIf="product_selected.campaing_discount"> {{ getCalNewPrice(product_selected) }} USD</span>
+                                    <span class="price-amount" *ngIf="!product_selected.campaing_discount">{{ product_selected.price_usd }} $</span>
+                                    <span class="price-amount" *ngIf="product_selected.campaing_discount"> <del>{{ product_selected.price_usd }} $</del> </span>
+                                    <span class="price-amount" *ngIf="product_selected.campaing_discount"> {{ getCalNewPrice(product_selected) }} $</span>
                                     <ul class="product-meta">
-                                        <li><i class="fal fa-check"></i>In stock</li>
-                                        <li><i class="fal fa-check"></i>Free delivery available</li>
-                                        <li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>
+                                        <li><i class="fal fa-check"></i>En stock</li>
+                                        <li><i class="fal fa-check"></i>Entrega gratuita disponible</li>
+                                        <li><i class="fal fa-check"></i>Ventas 30% de descuento Use el código: MOTIVE30</li>
                                     </ul>
                                     <p class="description">
                                         {{ product_selected.resumen }}
@@ -299,7 +300,7 @@
 
                                         <!-- Start Product Action  -->
                                         <ul class="product-action d-flex-center mb--0">
-                                            <li class="add-to-cart"><a href="cart.html" class="axil-btn btn-bg-primary">Add to Cart</a></li>
+                                            <li class="add-to-cart"><a href="cart.html" class="axil-btn btn-bg-primary">Agregar al carrito</a></li>
                                             <li class="wishlist"><a href="wishlist.html" class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a></li>
                                         </ul>
                                         <!-- End Product Action  -->

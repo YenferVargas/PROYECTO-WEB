@@ -246,38 +246,39 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <label>Select Color</label>
+              <label>Selecciona Color</label>
               <select
                 class="form-control form-control-lg form-control-solid"
                 name="color"
                 formControlName="color"
               >
-                <option value="Red">Red</option>
-                <option value="CadetBlue">CadetBlue</option>
-                <option value="Eagle">Eagle</option>
-                <option value="Gold">Gold</option>
-                <option value="LightSlateGrey">LightSlateGrey</option>
-                <option value="RoyalBlue">RoyalBlue</option>
-                <option value="Crimson">Crimson</option>
-                <option value="Blue">Blue</option>
-                <option value="Sienna">Sienna</option>
-                <option value="Indigo">Indigo</option>
-                <option value="Green">Green</option>
-                <option value="Violet">Violet</option>
-                <option value="GoldenRod">GoldenRod</option>
-                <option value="OrangeRed">OrangeRed</option>
-                <option value="Khaki">Khaki</option>
-                <option value="Teal">Teal</option>
-                <option value="Purple">Purple</option>
-                <option value="Orange">Orange</option>
-                <option value="Pink">Pink</option>
-                <option value="Black">Black</option>
-                <option value="DarkTurquoise">DarkTurquoise</option>
+              <option value="Red">Rojo</option>
+              <option value="CadetBlue">Azul Cadete</option>
+              <option value="Eagle">Águila (no es un color estándar, podría referirse a un gris o marrón)</option>
+              <option value="Gold">Oro</option>
+              <option value="LightSlateGrey">Gris Pizarra Claro</option>
+              <option value="RoyalBlue">Azul Real</option>
+              <option value="Crimson">Carmesí</option>
+              <option value="Blue">Azul</option>
+              <option value="Sienna">Siena</option>
+              <option value="Indigo">Índigo</option>
+              <option value="Green">Verde</option>
+              <option value="Violet">Violeta</option>
+              <option value="GoldenRod">Vara de Oro</option>
+              <option value="OrangeRed">Rojo Naranja</option>
+              <option value="Khaki">Caqui</option>
+              <option value="Teal">Verde Azulado</option>
+              <option value="Purple">Púrpura</option>
+              <option value="Orange">Naranja</option>
+              <option value="Pink">Rosa</option>
+              <option value="Black">Negro</option>
+              <option value="DarkTurquoise">Turquesa Oscuro</option>
+              
               </select>
-              <div class="feedback">Please select <b>Color</b></div>
+              <div class="feedback">Por favor selecciona un <b>Color</b></div>
             </div>
             <div class="col-lg-4">
-              <label>Enter Price ($)</label>
+              <label>Empresa ($)</label>
               <input
                 type="number"
                 class="form-control form-control-lg form-control-solid"
@@ -289,7 +290,7 @@
                 formControlName="price"
               />
               <div class="feedback" *ngIf="!isControlTouched('price')">
-                Please enter <b>Price</b>
+                Please enter <b>Precioo</b>
               </div>
               <div class="valid-feedback" *ngIf="isControlValid('price')">
                 Price was entered correct

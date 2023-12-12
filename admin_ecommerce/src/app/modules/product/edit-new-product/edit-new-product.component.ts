@@ -21,7 +21,7 @@ export class EditNewProductComponent implements OnInit {
 
   title:any = null;
   sku:any = null;
-  categories:any = [];
+  categories:any[] = [];
   categorie:any = "";
   price_soles:any = 0;  
   price_usd:any = 0;  
@@ -85,27 +85,42 @@ export class EditNewProductComponent implements OnInit {
     })
 
     this._categorieService.allCategories().subscribe((resp:any) => {
-      console.log(resp);
+      console.log('resp', resp);
       this.categories = resp.categories;
       this.loadServices();
     })
   }
 
   loadServices(){
+    console.log("dentro de la funcion load services");
+    console.log(this._productService);
+    console.log(this._productService.isLoadingSubject);
+    // console.log(this._productService.isLoadingSubject.next);
+
     this._productService.isLoadingSubject.next(true);
+    console.log("despues de setearlo a true");
+    console.log(this._productService);
+    console.log(this._productService.isLoadingSubject);
     setTimeout(() => {
       this._productService.isLoadingSubject.next(false);
+      console.log("despues de setearlo a false");
+      console.log(this._productService);
+      console.log(this._productService.isLoadingSubject);
     }, 50);
   }
 
   processFile($event){
+    console.log("dentro de la funcion prceess file");
+    console.log($event);
     if($event.target.files[0].type.indexOf("image") < 0){
       this.imagen_previzualizacion = null;
       this.toaster.open(NoticyAlertComponent,{text:`danger-'Upps! Necesita ingresar un archivo de tipo imagen.'`});
       return;
     }
+    console.log($event.target.files);
     this.imagen_file = $event.target.files[0];
     let reader = new FileReader();
+    console.log(reader);
     reader.readAsDataURL(this.imagen_file);
     reader.onloadend = () => this.imagen_previzualizacion = reader.result;
     this.loadServices();

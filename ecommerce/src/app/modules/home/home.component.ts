@@ -103,10 +103,11 @@ export class HomeComponent implements OnInit {
   }
 
   getRouterDiscount(bestProd:any){
-    if(bestProd.campaing_discount){
-      return {_id: bestProd.campaing_discount._id};
-    }
-    return {};
+    // if(bestProd.campaing_discount){
+    //  return {_id: bestProd.campaing_discount._id};
+    return {_id: bestProd._id};
+    // }
+    // return {};
   }
 
   addCart(product:any,is_sale_flash:any = null) {

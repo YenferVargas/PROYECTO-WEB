@@ -41,7 +41,7 @@
                                     </b></small>
                                 </ng-container>
                                 <!-- <span class="price-amount" *ngIf="getDiscount() > 0">  </span> -->
-                                <span class="price-amount">{{ product_selected.price_usd - getDiscount() }} USD</span>
+                                <span class="price-amount">{{ product_selected.price_usd - getDiscount() }} $</span>
                                 <div class="product-rating">
                                     <div class="star-rating">
                                         <i class="fas fa-star" [ngClass]="{'start-del': AVG_REVIEW < 1}"></i>
@@ -103,7 +103,7 @@
 
                                     <!-- Start Product Action  -->
                                     <ul class="product-action d-flex-center mb--0">
-                                        <li class="add-to-cart"><a href="#" onclick="return false;" (click)="addCart(product_selected)" class="axil-btn btn-bg-primary">Add to Cart</a></li>
+                                        <li class="add-to-cart"><a href="#" onclick="return false;" (click)="addCart(product_selected)" class="axil-btn btn-bg-primary">Add to Cart 1</a></li>
                                         <li class="wishlist"><a href="wishlist.html" class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a></li>
                                     </ul>
                                     <!-- End Product Action  -->
@@ -294,7 +294,7 @@
                                     <h5 class="title"><a [href]="'/landing-producto/'+related_product.slug">{{ related_product.title }}</a></h5>
                                     <div class="product-price-variant">
                                         <!-- <span class="price old-price">$30</span> -->
-                                        <span class="price current-price">{{ related_product.price_usd }} USD</span>
+                                        <span class="price current-price">{{ related_product.price_usd }} $</span>
                                     </div>
                                     <!-- <div class="color-variant-wrapper">
                                         <ul class="color-variant">

@@ -118,13 +118,13 @@
                                         <ng-container *ngFor="let cart of listCarts">
                                             <tr class="order-product">
                                                 <td>{{ cart.product.title }} <span class="quantity">x{{ cart.cantidad }}</span></td>
-                                                <td>{{ cart.total }} USD </td>
+                                                <td>{{ cart.total }} $</td>
                                             </tr>
                                         </ng-container>
                                         
                                         <tr class="order-subtotal">
                                             <td>Subtotal</td>
-                                            <td>{{ totalCarts }} USD</td>
+                                            <td>{{ totalCarts }} $</td>
                                         </tr>
                                         <tr class="order-shipping">
                                             <td colspan="2">

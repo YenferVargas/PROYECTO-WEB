@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './modules/auth-profile/_services/auth.guard';
 
+import { BlogComponent } from './modules/blog/blog.component';
+import { ContactoComponent } from './modules/contacto/contacto.component';
+import { NosotrosComponent } from './modules/nosotros/nosotros.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -22,6 +26,18 @@ export const routes: Routes = [
     loadChildren: () => import("./modules/auth-profile/auth-profile.module").then(m => m.AuthProfileModule),
   },
   {
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
+    path: 'contacto',
+    component: ContactoComponent,
+  },
+  {
+    path: 'nosotros',
+    component: NosotrosComponent,
+  },
+  {
     path: '',
     redirectTo: '/',
     pathMatch: 'full',
@@ -33,7 +49,6 @@ export const routes: Routes = [
 ]
 
 @NgModule({
-  // declarations: [],
   imports: [
     RouterModule.forRoot(routes)
   ],
